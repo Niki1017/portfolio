@@ -14,9 +14,6 @@ body {
     margin: auto;
     width: calc(100% - 20px);
     max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 a {
@@ -33,7 +30,9 @@ header {
 header .container {
     width: 100%;
     padding: 0 20px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-title h1 {
@@ -80,6 +79,47 @@ header .container {
     margin: 4px 0;
     transition: 0.4s;
 }
+
+.hero .container{
+    text-align: center;
+    margin: 60px auto;
+}
+
+.hero .container img{
+    border-radius: 1000px;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 800px) {
     .hamburger {
