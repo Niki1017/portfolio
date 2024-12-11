@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f8f9fa;
+    color: #212529; /* Darker text color */
+}
+
+.container {
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #212529; /* Darker text color */
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+header .container {
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.header-title h1 {
+    font-size: 1.5em;
+    color: #212529; /* Darker text color */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul li {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.invite {
+    background-color: #222;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #212529;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        text-align: center;
+        top: 60px;
+        right: 0;
+        width: 80%;
+        max-width: 300px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        /* align-items: flex-start; */
+        /* width: 100%; */
+    }
+    
+    .nav-menu ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-menu.active {
+        z-index: 1;
+        opacity: 1;
+    }
+}
