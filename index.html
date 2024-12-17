@@ -19,32 +19,139 @@
             </button>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#projects">Проекты</a></li>
+                    
+                    <li><a href="/#skills">Навыки</a></li>
+                    <li><a href="/#projects">Проекты</a></li>
                     <li><a href="#light"><img src="light.svg" alt=""></a></li>
                     <!-- <li><a href="#dark"><img src="dark.svg" alt=""></a></li> -->
-                    <li><a class="invite" href="#invite">Связаться</a></li>
+                    <li><a class="invite" href="/#invite">Связаться</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="hero">
+    <section id="about" class="hero">
         <div class="container">
-            <img src="me.jpg" alt="" width="300px" height="300px">
-            <h2>Привет из Оренбурга!</h2>
-            <p>Тут описание про моего учения и навыки что из себя я представляю, на сколько я машина виу виу виу виу</p>
+            <img src="me.jpg" alt="Nikita Egorov" width="300px" height="300px">
+            <h2>Спасибо что смотрите моё портфолио!</h2>
+            <p class="info">Я страстный, самопровозглашенный дизайнер, специализирующийся на полнофункциональной разработке (React.js и Node.js). Я с большим энтузиазмом воплощаю в жизнь технические и визуальные аспекты цифровых продуктов. Для меня важны пользовательский опыт, идеальный до пикселя дизайн и написание понятного, читаемого и высокопроизводительного кода.</p>
             <div class="icons">
-                <img src="nav.svg" alt=""><p>Россия, Оренбург</p>
-                <img src="access.svg" alt=""><p>Был добавлен новый проект</p>
+                <div class="icon-item">
+                    <img src="nav.svg" alt="Location">
+                    <p>Россия, Оренбург</p>
+                </div>
             </div>
             <div class="links">
-                <a id="github" href=""></a>
-                <a id="tg" href=""></a>
-                <a id="vk" href=""></a>
+                <a id="github" href="https://github.com/Niki1017" target="_blank"><img src="github.svg" alt="GitHub"></a>
+                <a id="tg" href="https://t.me/autli" target="_blank"><img src="tg.svg" alt="Telegram"></a>
+                <a id="vk" href="https://vk.com/autli_officiall" target="_blank"><img src="vk.svg" alt="VK"></a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="skills-title">Мои навыки</h2>
+            <div class="link-skills">
+                <a href="#">
+                    <img src="icon-javscript.svg" alt="Skill 1">
+                    <span>JavaScript</span>
+                </a>
+                <a href="#">
+                    <img src="icon-react.svg" alt="Skill 2">
+                    <span>React</span>
+                </a>
+                <a href="#">
+                    <img src="icon-express.svg" alt="Skill 3">
+                    <span>Express.js</span>
+                </a>
+                <a href="#">
+                    <img src="icon-sass.svg" alt="Skill 4">
+                    <span>Sass/Scss</span>
+                </a>
+                <a href="#">
+                    <img src="icon-react.svg" alt="Skill 3">
+                    <span>React Native</span>
+                </a>
+                <a href="#">
+                    <img src="django.svg" alt="Skill 4">
+                    <span>Django</span>
+                </a>
+                <a href="#">
+                    <img src="icon-electron.png" alt="Skill 3">
+                    <span>Electron</span>
+                </a>
+                <a href="#">
+                    <img src="icon-vite.svg" alt="Skill 4">
+                    <span>Vite</span>
+                </a>
+                <a href="#">
+                    <img src="icon-mysql.png" alt="Skill 3">
+                    <span>MySQL</span>
+                </a>
+                <a href="#">
+                    <img src="icon-postgresql.svg" alt="Skill 4">
+                    <span>Postgres</span>
+                </a>
+                <a href="#">
+                    <img src="icon-git.svg" alt="Skill 4">
+                    <span>Git</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="works" id="projects">
+        <div class="container">
+            <h2 class="skills-title">Мое портфолио</h2>
+            <div class="projects">
+                <div class="project">
+                    <div class="project-image">
+                        <img src="project_1.png" alt="Project Image">
+                    </div>
+                    <div class="info">
+                        <h3>Заголовок проекта</h3>
+                        <p>Описание проекта. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                        <div class="tags">
+                            <a href="#">React</a>
+                            <a href="#">Next.js</a>
+                            <a href="#">TypeScript</a>
+                            <a href="#">Nest.js</a>
+                            <a href="#">PostgreSQL</a>
+                            <a href="#">Tailwindcss</a>
+                            <a href="#">Figma</a>
+                            <a href="#">Cypress</a>
+                            <a href="#">Storybook</a>
+                            <a href="#">Git</a>
+                        </div>
+                        <a href="#" class="visit-site">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="project_1.png" alt="Project Image">
+                    </div>
+                    <div class="info">
+                        <h3>Заголовок проекта</h3>
+                        <p>Описание проекта. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                        <div class="tags">
+                            <a href="#">React</a>
+                            <a href="#">Next.js</a>
+                            <a href="#">TypeScript</a>
+                            <a href="#">Nest.js</a>
+                            <a href="#">PostgreSQL</a>
+                            <a href="#">Tailwindcss</a>
+                            <a href="#">Figma</a>
+                            <a href="#">Cypress</a>
+                            <a href="#">Storybook</a>
+                            <a href="#">Git</a>
+                        </div>
+                        <a href="#" class="visit-site">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

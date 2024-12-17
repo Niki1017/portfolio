@@ -92,22 +92,187 @@ header .container {
     margin-bottom: 30px;
 }
 
+.hero .container h2 {
+    margin-bottom: 30px;
+}
 
+.hero .container .info {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 30px;
+}
 
+.icons {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 40px; /* Increased space between items */
+    margin-bottom: 30px;
+}
 
+.icon-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between image and text */
+    text-align: center; /* Center text inside icon-item */
+}
 
+.icon-item img {
+    width: 40px;
+    height: 40px;
+}
 
+.icon-item p {
+    font-size: 1.2em; /* Increased font size */
+    margin-top: -30px;
+}
 
+.hero .container .links a img{
+    width: 64px;
+    margin: 0 15px;
+}
 
+.skills {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+}
 
+.skills-title {
+    display: inline-block;
+    background-color: #E5E7EB;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #4B5563;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
 
+.link-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+.link-skills a {
+    display: flex;
+    align-items: center;
+    background-color: #E5E7EB;
+    padding: 15px 20px;
+    color: #4B5563;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
 
+.link-skills a:hover {
+    transform: scale(1.05);
+    background-color: #d1d5db;
+}
 
+.link-skills a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 
+.link-skills a span {
+    flex: 1;
+}
+.works .container {
+    margin-top: 60px;
+    text-align: center;
+}
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Добавляем промежуток между проектами */
+    margin-top: 40px;
+}
 
+.project {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
 
+.project-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-right: 1px solid #ddd;
+}
+
+.info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tags a {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.visit-site {
+    margin-top: auto; /* Прижимаем кнопку к нижнему краю */
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    margin-top: 60px;
+}
+
+.visit-site:hover {
+    background: #0056b3;
+}
 
 
 
