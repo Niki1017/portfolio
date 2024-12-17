@@ -274,9 +274,22 @@ header .container {
     background: #0056b3;
 }
 
+footer {
+    margin-bottom: 60px;
+}
 
+footer .container {
+    margin-top: 60px;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    /* background-color: aqua; */
+}
 
-
+footer .container p {
+    font-size: 18px;
+}
 
 
 
