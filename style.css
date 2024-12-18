@@ -282,8 +282,8 @@ footer .container {
     margin-top: 60px;
     text-align: center;
     padding: 15px;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
+    border-top: 2px solid rgb(177, 177, 177);
+    border-bottom: 2px solid rgb(177, 177, 177);
     /* background-color: aqua; */
 }
 
