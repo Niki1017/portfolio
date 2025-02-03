@@ -1,0 +1,20 @@
+.cards .card {
+    display: inline-block;
+    width: 450px;
+    margin: 15px;
+    height: 300px;
+    background-color: aqua;
+}
+
+.cards .card img {
+    width: 100%;
+}
+
+.cards .card .info p {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    background-color: rgb(163, 163, 163);
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
