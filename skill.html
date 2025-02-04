@@ -1,37 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Навыки</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .skills {
+            width: 50%;
+            margin-top: 90px;
+            display: inline-block;
+            color: white;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 20px;
+            background: #b74b4b;
+            text-align: right;
+            line-height: 20px;
+            padding-right: 10px;
+            color: white;
+            font-weight: bold;
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">Nikita</a>
-
         <nav>
             <a href="index.html">Главная</a>
             <a href="#" class="active">Скиллы</a>
             <a href="projects.html">Проекты</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Мои <span>Скиллы</span></h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+    <section class="skills">
+        <h2>Мои навыки</h2>
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;">90%</div>
             </div>
-            <a href="#" class="btn">Hire me</a>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;">75%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">SASS</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">React</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
         </div>
     </section>
-
 </body>
+
 </html>

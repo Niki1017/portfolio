@@ -80,7 +80,8 @@ nav a.active{
     }
 
     nav.active{
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     nav a{
@@ -138,7 +139,7 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
     cursor: pointer;
     transition: 0.2s linear;
 }
@@ -216,6 +217,21 @@ span{
     border-left: 3px solid black;
     right: -8;
     animation: cursor 0.6s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home, .header {
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 @keyframes cursor{
