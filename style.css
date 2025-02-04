@@ -10,6 +10,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.container{
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 1400px;
+    background-color: aqua;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -24,7 +31,7 @@ body{
 
 header{
     margin-top: 20px;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -36,6 +43,7 @@ header{
     align-items: center;
     z-index: 100;
 }
+
 
 .logo{
     font-size: 3rem;
