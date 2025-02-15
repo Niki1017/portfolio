@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван Иванов - Веб-разработчик</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <span class="text-xl font-bold text-gray-900">Никита Егоров</span>
+                <div class="hidden sm:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-gray-900">Обо мне</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-gray-900">Портфолио</a>
+                    <a href="#contact" class="text-gray-700 hover:text-gray-900">Контакты</a>
+                </div>
+                <button class="sm:hidden text-gray-500 hover:text-gray-900" onclick="toggleMenu()">
+                    ☰
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="sm:hidden hidden">
+            <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Обо мне</a>
+            <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Портфолио</a>
+            <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white text-center py-24">
+        <h1 class="text-4xl font-extrabold text-gray-900">Привет, я Никита</h1>
+        <h2 class="text-indigo-600 text-3xl">Веб-разработчик</h2>
+        <p class="mt-3 text-gray-500">Создаю современные веб-приложения с передовыми технологиями</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900">Обо мне</h2>
+        <p class="mt-4 text-gray-500">Я специализируюсь на React, Express и современных технологиях.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900">Портфолио</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div class="portfolio-card">
+                <img src="project1.png" alt="Project 1" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Air Jordan Landing Page</h3>
+                    <p class="portfolio-description">Современный лендинг для демонстрации новой коллекции кроссовок Air Jordan. Сайт отличается стильным дизайном и плавными анимациями.</p>
+                    <a href="https://niki1017.github.io/airJordan/" target="_blank" rel="noopener noreferrer"
+                        class="portfolio-link">
+                        Посмотреть сайт
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="project2.png" alt="Project 2" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Строительный магазин orentools</h3>
+                    <p class="portfolio-description">Полнофункциональный интернет-магазин строительных материалов с каталогом товаров и размещением вакансий</p>
+                    <a href="https://orentools.ru/" target="_blank" rel="noopener noreferrer"
+                        class="portfolio-link">
+                        Посмотреть сайт
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="project3.png" alt="Project 3" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Одностраничный сайт украшений</h3>
+                    <p class="portfolio-description">Современный и стильный интернет-магазин ювелирных украшений с лаконичным дизайном. Разработан по принципу pixel perfect с плавной анимацией и встроенным видео, создающим атмосферу бренда.</p>
+                    <a href="https://niki1017.github.io/diamond/" target="_blank" rel="noopener noreferrer"
+                        class="portfolio-link">
+                        Посмотреть сайт
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="project4.png" alt="Project 3" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Продуктовый сайт компании</h3>
+                    <p class="portfolio-description">Стильный и удобный интернет-магазин продуктов, созданный с учетом всех современных тенденций веб-дизайна. Благодаря Pixel Perfect верстке, встроенным видео и адаптивному интерфейсу, сайт обеспечивает максимальный комфорт при выборе и покупке товаров.</p>
+                    <a href="https://niki1017.github.io/foods/" target="_blank" rel="noopener noreferrer"
+                        class="portfolio-link">
+                        Посмотреть сайт
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900">Свяжитесь со мной</h2>
+        <div class="mt-6 flex justify-center space-x-6">
+            <a href="mailto:autli@list.ru" class="text-gray-400 hover:text-gray-500">✉ Email</a>
+            <a href="https://github.com/Niki1017" class="text-gray-400 hover:text-gray-500">💻 GitHub</a>
+            <a href="https://linkedin.com" class="text-gray-400 hover:text-gray-500">🔗 LinkedIn</a>
+            <a href="https://t.me/CreateSitesBot" class="text-gray-400 hover:text-gray-500">✈️ Telegram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 text-center text-gray-500">
+        © 2024 Иван Иванов. Все права защищены.
+    </footer>
+</body>
+
+</html>
