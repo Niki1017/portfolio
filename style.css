@@ -52,3 +52,45 @@
     background: #4338ca;
   }
   
+#mobile-menu {
+  text-align: center;
+}
+
+/* Базовые стили для tooltip */
+.tooltip {
+  /* Позиционирование и скрытие по умолчанию */
+  position: absolute;
+  bottom: -2.5rem;   /* Сдвиг тултипа ниже иконки */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  font-size: 0.875rem; /* text-sm */
+  border-radius: 0.375rem; /* rounded-md */
+  white-space: nowrap;
+  
+  /* Анимация появления/исчезновения */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Хвостик-стрелка на tooltip */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -6px; /* Располагаем стрелку над тултипом */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  /* Псевдоэлемент будет белым, т.к. тултип цветной. 
+     Для корректной “перекраски” применяем фильтр: */
+  filter: brightness(0) invert(1);
+}
+
+/* При наведении на блок с классом .group тултип появляется */
+.group:hover .tooltip {
+  opacity: 1;
+}
