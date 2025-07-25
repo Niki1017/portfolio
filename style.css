@@ -138,6 +138,39 @@ nav {
   width: 100%;
 }
 
+/* Гамбургер-меню */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* Анимация гамбургера */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
 /* Герой секция - Параллакс эффект */
 .hero {
   height: 100vh;
@@ -191,8 +224,10 @@ nav {
 
 /* Услуги - 3D карточки */
 .services-grid {
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
   gap: 30px;
 }
 
@@ -274,7 +309,9 @@ nav {
 /* Портфолио */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, 350px);
+  align-items: start;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -339,6 +376,38 @@ nav {
   text-decoration: none;
 }
 
+.portfolio-item-large {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  height: calc(350px * 9 / 16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.portfolio-item-large .portfolio-title {
+  margin-bottom: 15px;
+}
+
+.portfolio-item-large p {
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.portfolio-item-tall {
+  margin-top: -227px;
+  aspect-ratio: auto;
+  /* Высота 2-х карточек + отступ */
+  height: calc((350px * 9 / 16) * 2 + 30px);
+}
+.portfolio-item-wide {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  height: calc(350px * 9 / 16);
+}
 /* Контакты */
 .contact-container {
   display: flex;
@@ -469,11 +538,62 @@ footer {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--secondary);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 100px 30px 30px;
+    transition: right 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
   }
 
-  .mobile-menu-btn {
+  .nav-links.active {
+    right: 0;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0 0 25px 0;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav-links.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav-links.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav-links.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .nav-links.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 10px 0;
     display: block;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .hero {
@@ -493,9 +613,18 @@ footer {
     width: 100%;
     max-width: 400px;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
 }
 
-@media (max-width: 576px) {
+/* Адаптация для маленьких экранов */
+@media (max-width: 480px) {
+  .nav-links {
+    width: 85%;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -507,6 +636,18 @@ footer {
 
   .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-item-large {
+    grid-column: span 1; /* На мобильных занимает 1 колонку */
+    height: auto; /* Высота по содержимому */
+    padding: 40px 30px;
+  }
+
+  .portfolio-item-wide {
+    grid-column: span 1;
+    aspect-ratio: 16/9;
+    height: auto;
   }
 }
 
