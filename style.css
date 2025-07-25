@@ -322,6 +322,14 @@ nav {
   aspect-ratio: 16/9;
   background: var(--secondary);
   border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стиль для фокуса с клавиатуры, добавляемый через JS */
+.portfolio-item:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
 }
 
 .portfolio-img {
@@ -617,6 +625,22 @@ footer {
   .no-scroll {
     overflow: hidden;
   }
+
+  .portfolio-grid {
+    /* Переключаемся на одну колонку для планшетов и мобильных */
+    grid-template-columns: 1fr;
+  }
+
+  /* Сбрасываем специальные стили для всех нестандартных карточек */
+  .portfolio-item-large,
+  .portfolio-item-wide,
+  .portfolio-item-tall {
+    grid-column: span 1;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* Главное исправление: убираем отрицательный отступ */
+    margin-top: 0;
+  }
 }
 
 /* Адаптация для маленьких экранов */
@@ -634,20 +658,10 @@ footer {
     padding: 120px 0 80px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
   .portfolio-item-large {
-    grid-column: span 1; /* На мобильных занимает 1 колонку */
-    height: auto; /* Высота по содержимому */
+    /* На маленьких экранах высота текстового блока определяется контентом */
+    aspect-ratio: auto;
     padding: 40px 30px;
-  }
-
-  .portfolio-item-wide {
-    grid-column: span 1;
-    aspect-ratio: 16/9;
-    height: auto;
   }
 }
 
